@@ -1,13 +1,124 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ecf0f1;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#title {
+    color: #1abc9c;
+    transform: translate(-115px, 0);
+    height: 10px;
+    font-size: 35px;
+    z-index: -1;
+}
+
+ol {
+    list-style-type: none;
+    padding-left: 0;
+    width: 100%;
+    position: absolute;
+}
+
+.game-board {
+    padding: 10px;
+    background-color: #1abc9c;
+    border-radius: 10px;
+}
+
+.board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.status {
+    margin-bottom: 10px;
+}
+
+.square {
+    background: #bdc3c7;
+    border: 1px solid #95a5a6;
+    float: left;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 60px;
+    height: 60px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 60px;
+}
+
+.square:focus {
+    outline: none;
+}
+
+.kbd-navigation .square:focus {
+    background: #ddd;
+}
+
+.game-center {
+    display: flex;
+    background-color: #16a085;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 0px #177361;
+}
+
+.game-info {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+}
+
+.history-container {
+    position: relative;
+    overflow: auto;
+    flex: 1;
+    margin-top: 15px;
+    scroll-behavior: smooth;
+}
+
+.link-history {
+    border: none;
+    border-bottom: 1px solid #177361;
+    padding: 6px;
+    background-color: transparent;
+    cursor: pointer;
+    width: 75%;
+    text-align: left;
+    display: inline-block;
+    animation: link-history-open .3s;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #bdc3c7;
+  border: 0px none #ffffff;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #177361;
+  border: 0px none #ffffff;
+  border-radius: 5px;
+}
+
+@keyframes link-history-open {
+    from    {opacity: 0;}
+    to      {opacity: 1;}
 }
