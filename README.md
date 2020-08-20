@@ -1,3 +1,6 @@
+# Tic Tac Toe React
+Ce projet a été créé lors du suivi du tutoriel d'apprentissage de React trouvable à l'adresse [Tutoriel : intro à React](https://fr.reactjs.org/tutorial/tutorial.html)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
